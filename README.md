@@ -1,5 +1,6 @@
 # Xamarin_Screensize
 
+Here are examples for storing the specific OS's screen details in `static` vars, located in the Xamarin Forms `App` class
 
 ## Android (MainActivity.cs) - [Jump to Code Page](https://github.com/mattregul/Xamarin_Screensize/blob/master/screensize/screensize/screensize/screensize.Droid/MainActivity.cs#L22-L36)
 ```c#
