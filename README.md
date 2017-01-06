@@ -64,6 +64,48 @@ screensize.App.DisplayScreenWidth = Window.Current.Bounds.Width;
 screensize.App.DisplayScaleFactor = 1; // No scaling here?  If you find a scaling for Windows 8.1, please let me know :)
 ```
 
-### Additional Goodies
-[jasonCodesAway's Screen Size Plugin](https://www.nuget.org/packages/Xam.Plugins.XamJam.Screen)
+## Xamarin Forms Page - [Jump to Code Page](https://github.com/mattregul/Xamarin_Screensize/blob/master/screensize/screensize/screensize/screensize/App.cs#L10-L44)
+```c#
+namespace screensize
+{
+    public class App : Application
+    {
+        public static double DisplayScreenWidth = 0f;
+        public static double DisplayScreenHeight = 0f;
+        public static double DisplayScaleFactor = 0f;
+
+        public App()
+        {
+
+            string ScreenDetails = Device.OS.ToString() + " Device Screen Size:\n" +
+                $"Width: {DisplayScreenWidth}\n" +
+                $"Height: {DisplayScreenHeight}\n" +
+                $"Scale Factor: {DisplayScaleFactor}";
+
+            // The root page of your application
+            var content = new ContentPage
+            {
+                Title = "Xamarin_GetDeviceScreensize",
+                Content = new StackLayout
+                {
+                    VerticalOptions = LayoutOptions.Center,
+                    Children = {
+                        new Label {
+                            HorizontalTextAlignment = TextAlignment.Center,
+                            FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label)),
+                            Text = ScreenDetails
+                        }
+                    }
+                }
+            };
+
+            MainPage = new NavigationPage(content);
+        }
+
+    }
+}
+```
+
+ Additional Goodies
+- [jasonCodesAway's Screen Size Plugin](https://www.nuget.org/packages/Xam.Plugins.XamJam.Screen)
  - [Nuget Page](https://www.nuget.org/packages/Xam.Plugins.XamJam.Screen) || [Github Page](https://github.com/jasonCodesAway/XamJam/tree/master/XamJam.Screen)
