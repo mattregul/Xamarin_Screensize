@@ -107,5 +107,5 @@ namespace screensize
 ```
 
  Additional Goodies
-- [jasonCodesAway's Xamarin Screen Size Plugin](https://www.nuget.org/packages/Xam.Plugins.XamJam.Screen)
+- jasonCodesAway made a nice Xamarin plugin to determine screen size
  - [Nuget Page](https://www.nuget.org/packages/Xam.Plugins.XamJam.Screen) || [Github Page](https://github.com/jasonCodesAway/XamJam/tree/master/XamJam.Screen)
